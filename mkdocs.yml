@@ -1,1 +1,6 @@
-site_name: My Docs
+site_name: hibiki31
+
+theme:
+  name: material
+  palette:
+    primary: cyan
