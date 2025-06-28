@@ -1,4 +1,4 @@
-# Binardat 8ポート10Gマネージドスイッチ
+# Binardat 10G SW
 
 2025年6月28日
 
@@ -20,19 +20,25 @@
 
 ![image-20250628180539976](./binardat-10g-switch.assets/image-20250628180539976.png)
 
-ホームではポートのステータスが確認できる。MACやSerialは管理コンソールで消している。
+### ホーム
+
+ポートのステータスが確認できる。MACやSerialは管理コンソールで消している。
 
 ![image-20250628180724785](./binardat-10g-switch.assets/image-20250628180724785.png)
 
-[System Config] IP ConfigでVLANごとにIPをつけれる。
+### System Config
+
+IP ConfigでVLANごとにIPをつけれる。
 
 ![image-20250628180905673](./binardat-10g-switch.assets/image-20250628180905673.png)
 
-[Monitor Management] SSH ConfigでSSHの設定ができる。デフォルトは無効。
+### Monitor Management
+
+SSH ConfigでSSHの設定ができる。デフォルトは無効。
 
 ![image-20250628181144764](./binardat-10g-switch.assets/image-20250628181144764.png)
 
-SSHしてみる。Ciscoライクかよ。
+SSHしてみる。Ciscoライクやん。
 
 ```
 ssh admin@192.168.2.1
@@ -95,38 +101,66 @@ end
 
 ```
 
-[Monitor Management] SNMP Config 吐けそうで良い。
+SNMP Config 吐けそうで良い。
 
 ![image-20250628181529624](./binardat-10g-switch.assets/image-20250628181529624.png)
 
-[Switch Config] Jumbo Frame 9000にしたかったので良い。
+### Switch Config
+
+Jumbo Frame 9000にしたかったので良い。
 
 ![image-20250628181630880](./binardat-10g-switch.assets/image-20250628181630880.png)
 
-[VLAN Config] VLAN ID 最大何個まで動くかは確認したい。
+### VLAN Config
+
+VLAN ID 最大何個まで動くかは確認したい。
 
 ![image-20250628181726045](./binardat-10g-switch.assets/image-20250628181726045.png)
 
-[DHCP Config] DHCP Serverも搭載。
+VLANハイブリットを初めて知った。Nativeはタグが付いていないフレームを受け取ったとき、UnTaggedは指定したVLANの時はタグを付けずに送る。複数指定するとヤバいと思うけどなぜ指定ができるのか。
+
+![image-20250628190815472](./binardat-10g-switch.assets/image-20250628190815472.png)
+
+
+
+### DHCP Config
+
+DHCP Serverも搭載。
 
 ![image-20250628181829739](./binardat-10g-switch.assets/image-20250628181829739.png)
 
-[ACL Config] L2, L3で書ける。時間帯の指定もできる。
+### ACL Config
+
+L2, L3で書ける。時間帯の指定もできる。
 
 ![image-20250628181928023](./binardat-10g-switch.assets/image-20250628181928023.png)
 
-[Ring Network] L2リング系のプロトコルも対応。Rapid STP対応しているのかな？
+### Ring Network
+
+L2リング系のプロトコルも対応。Rapid STP対応しているのかな？
 
 ![image-20250628182014441](./binardat-10g-switch.assets/image-20250628182014441.png)
 
-[Route Config] スタティックもダイナミックもそこそこ色々ある。
+### Route Config
+
+スタティックもダイナミックもそこそこ色々ある。
 
 ![image-20250628182135466](./binardat-10g-switch.assets/image-20250628182135466.png)
 
-[Multicast Manage] IGMPあればとりあえず良い。
+### Multicast Manage
+
+IGMPあればとりあえず良い。
 
 ![image-20250628182226164](./binardat-10g-switch.assets/image-20250628182226164.png)
 
-[QoS Config] まあ普通。
+### QoS Config
+
+まあ普通。
 
 ![image-20250628182307071](./binardat-10g-switch.assets/image-20250628182307071.png)
+
+## SpeedTest
+
+メインのデスクトップは2.5Gなのでほぼ理論値
+
+![image-20250628191422077](./binardat-10g-switch.assets/image-20250628191422077.png)
