@@ -1,15 +1,32 @@
 site_name: hibiki31
+copyright: "&copy; 2019-2025 hibiki31"
 
 theme:
   name: material
+  language: 'ja'
   palette:
     primary: cyan
+  font:
+    text: Noto Sans JP
+    code: Roboto Mono
+  features:
+    - navigation.tabs
 
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
   - pymdownx.inlinehilite
   - pymdownx.snippets
-  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: true
+
+extra:
+  generator: false
+  search:
+    language: 'jp'
