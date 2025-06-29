@@ -164,3 +164,10 @@ IGMPあればとりあえず良い。
 メインのデスクトップは2.5Gなのでほぼ理論値
 
 ![image-20250628191422077](./binardat-10g-switch.assets/image-20250628191422077.png)
+
+## SNMP
+
+- Global Config -> Agent State -> Enabled
+- Community Config ->
+  - Community Name -> public
+  - Access Priority -> Readonly
